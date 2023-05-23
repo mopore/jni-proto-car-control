@@ -22,8 +22,7 @@ Further information can be found here: https://www.youtube.com/watch?v=nctYJaDNL
 
 
 
-
-# Setup
+# Setup and Usage
 ## Create a include/jni_config.h file
 For Wifi and further network setup. Create a file called `include/jni_config.h` with the following content:
 
@@ -36,3 +35,6 @@ For Wifi and further network setup. Create a file called `include/jni_config.h` 
 
 #define ESP32_HOST_MAC "e8:9f:6d:25:49:26"  // MAC address of the ESP32 linked with PS3 Controller
 ```
+
+Make sure to add the correct IP address of the car base in your `jni_config.h` (shown on the cars display and published via MQTT).
+Further instructions can be found in the base (main project).
