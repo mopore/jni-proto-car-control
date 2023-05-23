@@ -1,7 +1,9 @@
 JNI Proto Car Control
 =====================
-This is the controller project for to remotely control the JNI Proto Car with an PS3 Controller.
-The project for the JNI Proto Car can be found [here](https://github.com/mopore/jni-proto-car-base).
+This is the controller project to remotely control the JNI Proto Car with an PS3 Controller.
+This project rewrites the original CircuitPython code to C++ and uses the Arduino framework.
+
+The project for the JNI Proto Car Base can be found [here](https://github.com/mopore/jni-proto-car-base).
 
 
 # Pre-requisites
