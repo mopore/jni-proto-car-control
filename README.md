@@ -14,6 +14,14 @@ The project for the JNI Proto Car Base can be found [here](https://github.com/mo
 * A PS3 Controller (or compatible replica)
 * A Wifi network
 
+Note that it might be hard to purchase a new original PS3 controller. Unfortunately not all replicas are compatible and will work.
+The following controller worked for me:
+[Link to used controller from Digitec (CH)](https://www.digitec.ch/de/s1/product/tracer-tracer-trooper-ps3-gaming-controller-15680780?supplier=406802)
+I further used the [Sixaxis Pair Tool](https://www.filehorse.com/download-sixaxispairtool/) to initiate and set the targeted MAC address on the PS3 controller (not its own but the "PS3/bases' one").
+Further information can be found here: https://www.youtube.com/watch?v=nctYJaDNLU0
+
+
+
 
 # Setup
 ## Create a include/jni_config.h file
