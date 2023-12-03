@@ -47,12 +47,14 @@ void readPowerTask(void* pvParameters) {
 void setup() {
 	Serial.begin(115200);
 
+	Serial.println("Starting...");
 	connectionStatus.isWifiConnected = false;
 	setWifiStatusIP_v4(NO_IP);
 	connectionStatus.isBaseConnectionWorking = false;
 	connectionStatus.isControllerConnected = false;
 
 	char out_ip[MAX_IP_LENGTH];
+	Serial.println("Connecting to WiFi");
 	connect_wifi(out_ip, WIFI_SSID, WIFI_PASS);
 	if (strcmp(out_ip, NO_IP) != 0) {
 		Serial.printf("Connected with IP address: %s\n", out_ip);
@@ -62,6 +64,9 @@ void setup() {
 		xTaskCreate(displayTask, "displayTask", 4096, NULL, 1, NULL);
 		xTaskCreate(readInputTask, "readInputTask", 4096, NULL, 1, NULL);	
 		xTaskCreate(readPowerTask, "readPowerTask", 4096, NULL, 1, NULL);
+	}
+	else {
+		Serial.println("Failed to connect to WiFi");
 	}
 
 }
